@@ -1,0 +1,20 @@
+{
+    "title":"",
+    "description":"",
+    "questions":{
+        "1":{
+            "title":"",
+            "description":"",
+            "options_type":"",
+            "options":[],
+            "required":"bool"
+        },
+        "2":{
+            "title":"",
+            "description":"",
+            "options_type":"",
+            "options":[],
+            "required":"bool"
+        }
+    }
+}
