@@ -19,4 +19,4 @@ requests==2.11.1
 requests-toolbelt==0.7.0
 rsa==4.7.2
 six==1.16.0
-Werkze
+wrkze

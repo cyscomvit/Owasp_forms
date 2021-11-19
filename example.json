@@ -1,20 +1,62 @@
 {
-    "title":"",
-    "description":"",
-    "questions":{
-        "1":{
-            "title":"",
-            "description":"",
-            "options_type":"",
-            "options":[],
-            "required":"bool"
+    "Event_name":"Valo",
+    "title":"User Forms",
+    "description":"Form for Collecting User Data",
+    "questions":[
+        {
+            "title":"What is your age group",
+            "description":"Enter Your Age group Range",
+            "options_type":"mcq",
+            "options":[
+                "15-18",
+                "19-25",
+                "26-30",
+                "30-40"
+            ],
+            "required":1
         },
-        "2":{
-            "title":"",
-            "description":"",
-            "options_type":"",
+        {
+            "title":"Enter Your Name",
+            "description":"Please Enter Your Name",
+            "options_type":"short",
             "options":[],
-            "required":"bool"
+            "required":1
         }
+    ],
+
+
+    
+        "User Forms": {
+            "Format": {
+                "Event_name": "",
+                "description": "",
+                "questions": [
+                    {
+                        "description": "Enter Your Age group Range",
+                        "options": [
+                            "15-18",
+                            "19-25",
+                            "26-30",
+                            "30-40"
+                        ],
+                        "options_type": "mcq",
+                        "required":1,
+                        "title": "What is your age group",
+                        "answers": [
+                            "19-25"
+                        ]
+                    },
+                    {
+                        "description": "Please Enter Your Name",
+                        "options_type": "short",
+                        "required":1,
+                        "title": "Enter Your Name",
+                        "answers":[
+                            "LoremIpsum"
+                        ]
+                    }
+                ],
+                "title": "User Forms"
+            }
     }
 }

@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask,request,render_template
 from Event_forms.auth import auths
 from Event_forms.admin import admin
 from Event_forms.users import users
@@ -12,20 +12,12 @@ app.register_blueprint(admin)
 app.register_blueprint(users)
 
 
-with open('firebase.json','r') as f:
-    config=json.load(f)
-
-firebase=pyrebase.initialize_app(config)
-
-auth=firebase.auth()
-
-
-
 @app.route('/eventforms/')
 def home():
+    # return render_template('index.html')
     return "OWASP FORMS"
  
 
 if __name__ == '__main__':
 
-    app.run(host='0.0.0.0',debug=True,port=5000)
+    app.run(host='127.0.0.1',debug=True,port=8000)

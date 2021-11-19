@@ -1,7 +1,7 @@
 from flask import Flask,Blueprint,request,render_template,redirect
 from Event_forms.conf import firebase
 import json
-
+import pprint
 auth=firebase.auth()
 
 auths=Blueprint('auth_routes',__name__)
@@ -35,6 +35,6 @@ def register():
             auth.create_user_with_email_and_password(email, password)
             return render_template('login.html',succ=successful)
         except Exception as e:
-            print(e)
+            pprint.pprint(e)
             return render_template('register.html',us=unsuccessful)
     return render_template('register.html')
