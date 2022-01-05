@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form</title>
+    <!-- boot strap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+    <!-- j query -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <from>
+        <!-- <div class="duplicate">
+            <button id="dup">Add </button>
+        </div> -->
+        <!-- tile 1 -->
+        <div id="container">
+            <button id="newsectionbtn">+New Section</button>
+            <section id="mainsection">
+                <tile>
+                    <input type="text" id="question" placeholder="Untitled Question"/>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Answer Type
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button" onclick="myText()">Short Answer</button>
+                        <button class="dropdown-item" type="button" onclick="myTextArea()">Paragraph</button>
+                        <button class="dropdown-item" type="button" onclick="myCheckBox()">Check Box</button>
+                        </div>
+                    </div>
+                    <div class="answers">
+                        <div id="text"  style="display: none";>
+                            Textbox:
+                            <input type="text" id="textId">
+                        </div>
+                        <div id="textArea" style="display: none";>
+                            Text Area:
+                            <textarea  rows="4" cols="50"></textarea>  
+                        </div>
+                        <div id="checkBox" style="display: none";>
+                            Check Box:
+                            <input type="checkbox" id="checkBoxId"  />
+                        </div>  
+                    </div>
+                </tile>
+            </section>
+            </div>
+    </from>
+
+
+<!--  java script -->
+
+<!-- <script>
+    $(document).ready(function(){
+       $document.getElementById("dup").click(function(){
+          $("tile").clone().appendTo("body");
+       });
+    });
+</script> -->
+
+<script>
+    document.getElementById("newsectionbtn").onclick = function() {
+    var container = document.getElementById("container");
+    var section = document.getElementById("mainsection");
+    container.appendChild(section.cloneNode(true));
+}
+</script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
