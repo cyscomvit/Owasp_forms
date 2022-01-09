@@ -27,18 +27,17 @@
             <section id="mainsection">
                 <tile id="tile">
                     <input type="text" id="question" placeholder="Untitled Question"/>
-                    <div class="dropdown">
+                    <div class="dropdown" id="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Answer Type
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" onclick="myText()">Short Answer</button>
-                        <button class="dropdown-item" type="button" onclick="myTextArea()">Paragraph</button>
-                        <button class="dropdown-item" type="button" onclick="myCheckBox()">Check Box</button>
+                        <button class="dropdown-item" type="button" onClick="toggleText(this)">Short Answer</button>
+                        <button class="dropdown-item" type="button" onClick="myTextArea(this)">Paragraph</button>
+                        <button class="dropdown-item" type="button" onClick="myCheckBox(this)">Check Box</button>
                         </div>
                     </div>
-                    <div class="answers">
-                        <div id="text"  style="display: none";>
+                    <div class="answers" id="answers"><div id="text" style="display: none";>
                             Textbox:
                             <input type="text" id="textId">
                         </div>
@@ -55,7 +54,6 @@
             </section>
             </div>
     </from>
-
 
 <!--  java script -->
 
