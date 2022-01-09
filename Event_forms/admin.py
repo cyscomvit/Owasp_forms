@@ -4,6 +4,14 @@ from Event_forms.conf import firebase
 
 admin=Blueprint('admin_routes',__name__)
 
+@admin.route('/eventforms')
+def index():
+    return render_template("index.html")
+
+@admin.route('/eventforms/add_forms',methods=["POST","GET"])
+def add_forms():
+    return "WORKING"
+
 
 @admin.route('/eventforms/create_event')
 def create_event():
@@ -25,3 +33,5 @@ def forms():
     db.child("Owasp_Forms").child("{}".format(event)).child("{}".format(data['title'])).child("Format").set(data)
 
     return data
+
+

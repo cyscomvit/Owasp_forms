@@ -21,8 +21,10 @@ def get_data():
 @users.route('/{}/fill'.format(prefix))
 def fill_data():
     data = request.get_json()
+    print(data)
     event=data['event']
     title=data['title']
     db= firebase.database()
     db.child("Owasp_Forms").child("{}".format(event)).child("{}".format(title)).child("responses").set(data)
     return data
+

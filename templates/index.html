@@ -11,19 +11,19 @@
 
 
 
-    <link href="index.css" rel="stylesheet">
+    <link href="/static/assets/dist/css/index.css" rel="stylesheet">
 
     <!-- j query -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <from>
+    <form action="eventforms/add_forms" method="post">
         <!-- <div class="duplicate">
             <button id="dup">Add </button>
         </div> -->
         <!-- tile 1 -->
         <div id="container">
-            <button id="newsectionbtn">+New Section</button>
+            <button id="newsectionbtn" class="newtilebtn" type="button">+New Section</button>
             <section id="mainsection">
                 <tile id="tile">
                     <input type="text" id="question" placeholder="Untitled Question"/>
@@ -32,9 +32,9 @@
                         Answer Type
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" onClick="toggleText(this)">Short Answer</button>
-                        <button class="dropdown-item" type="button" onClick="myTextArea(this)">Paragraph</button>
-                        <button class="dropdown-item" type="button" onClick="myCheckBox(this)">Check Box</button>
+                        <button class="dropdown-item" type="button" id="shortAnswerId" onClick="toggleText(this)">Short Answer</button>
+                        <button class="dropdown-item" type="button" id="ParagraphId" onClick="myTextArea(this)">Paragraph</button>
+                        <button class="dropdown-item" type="button" id="checkBoxId" onClick="myCheckBox(this)">Check Box</button>
                         </div>
                     </div>
                     <div class="answers" id="answers"><div id="text" style="display: none";>
@@ -43,7 +43,7 @@
                         </div>
                         <div id="textArea" style="display: none";>
                             Text Area:
-                            <textarea  rows="4" cols="50"></textarea>  
+                            <textarea  rows="4" cols="50" id="longAnswer"></textarea>  
                         </div>
                         <div id="checkBox" style="display: none";>
                             Check Box:
@@ -55,9 +55,9 @@
             </div>
 
 <!-- submit button -->
-<button>Submit</button>
-    </from>
-
+<input id="Submit" name="submitButton" type="submit">Submit</input>    <!-- Id given to the submit button --> 
+    </form>
+    <!-- <button name="forwardBtn" onclick="move_forward()">Forward</button> -->
 
 <!--  java script -->
 
@@ -79,10 +79,11 @@
 
 
 
-
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="/static/assets/dist/js/index.js"></script>
+    <script src="/static/assets/dist/js/getdata.js"></script>
 </body>
 </html>
