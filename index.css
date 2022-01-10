@@ -5,6 +5,10 @@
 
 }
 
-section{
+.tile{
     border: 1px solid black;
+}
+
+button{
+    margin:20px;
 }

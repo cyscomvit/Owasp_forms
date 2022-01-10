@@ -88,6 +88,7 @@ function myCheckBox(item){
 }
 
 document.getElementById("newsectionbtn").onclick = function() {
+  console.log("hi");
  var tile = document.getElementById("tile");
  var section = document.getElementById("mainsection");
  var clone = tile.cloneNode(true)                                            // Create a clone to avoid overwriting
@@ -99,4 +100,9 @@ document.getElementById("newsectionbtn").onclick = function() {
 // Always include script tags after the document body and css files before the document body
 
 // removing div on buttton click
+
+function removeQuestion(){
+  var remQue=document.getElementById("tile");
+  remQue.remove();
+}
 
