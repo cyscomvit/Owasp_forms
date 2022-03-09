@@ -1,16 +1,37 @@
-from flask import Flask,Blueprint,request,render_template
+from flask import Flask,Blueprint,request,render_template,jsonify
 import json
 from Event_forms.conf import firebase
+import os
 
 admin=Blueprint('admin_routes',__name__)
 
-@admin.route('/eventforms')
+@admin.route('/eventforms',methods=["POST","GET"])
 def index():
     return render_template("index.html")
 
 @admin.route('/eventforms/add_forms',methods=["POST","GET"])
 def add_forms():
-    return "WORKING"
+    data={}
+    if request.method=="POST":
+        content=request.json
+        print(content)
+        return jsonify(content)
+    return "GET"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @admin.route('/eventforms/create_event')
