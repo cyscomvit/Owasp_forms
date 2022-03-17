@@ -14,8 +14,8 @@ app.register_blueprint(users)
 
 @app.route('/eventforms/')
 def home():
-    # return render_template('index.html')
-    return "OWASP FORMS"
+    return render_template('index.html')
+    #return "OWASP FORMS"
  
 
 if __name__ == '__main__':
